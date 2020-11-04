@@ -8,7 +8,7 @@ function myFunction() {
         totalSoFar=1;
     }
     for (var i = 0; i < value.length; i++){
-        if (value.charAt(i) == ' ' && value.charAt(i-1) != ' ' && value.charAt(i+1) != ' ') { 
+        if (value.charAt(i) == ' ' && value.charAt(i-1) != ' ') { 
             totalSoFar++; 
         }
         if (value.charAt(i) == ' ') { 
@@ -16,7 +16,7 @@ function myFunction() {
         }
        // var numOfSentences = value.split(re);
        if (value.charAt(i) == '.' || value.charAt(i) == '!' ||value.charAt(i) == '?') { 
-           if(value.charAt(i-1) != '.' || value.charAt(i-1) != '?'|| value.charAt(i-1) != '!' ){
+           if(value.charAt(i-1) != '.' && value.charAt(i-1) != '?' && value.charAt(i-1) != '!' ){
                 sentencesCount++; 
            }
             
@@ -27,4 +27,5 @@ function myFunction() {
     document.getElementById("charactersWithSpace").innerHTML = "Total Characters(with spaces) : "+ value.length;
     document.getElementById("letter").innerHTML = "Total Characters(no spaces) : "+ (value.length-spaceCount);
     document.getElementById("sentences").innerHTML = "Total Sentences : "+ sentencesCount;
+
 }
