@@ -2,7 +2,7 @@ function myFunction() {
     var value = document.getElementById("text").value;
     var totalSoFar=0;
     var spaceCount=0;
-    if(value.length != null){
+    if(value.length != ' '){
         totalSoFar=1;
     }
     for (var i = 0; i < value.length; i++){
